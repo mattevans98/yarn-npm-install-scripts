@@ -6,4 +6,4 @@ destDir=$(pwd)
 cp "${linterDir}/.eslintrc.js" "${linterDir}/.prettierrc.js" "${linterDir}/tsconfig.json" "$destDir"
 git add .eslintrc.js
 git add .prettierrc.js
-echo 'Config files copied. Have fun!'
+echo 'Config files copied and added to git. Have fun!'
