@@ -8,11 +8,11 @@ read yarnChoice
 wasSuccessful=false
 if [ "$yarnChoice" == 'y'] || [ "$yarnChoice" == 'Y']
 then
-  "${INSTALL_SCRIPTS_DIR}/yarn-add-express.sh"
+  "${INSTALL_SCRIPTS_DIR}/express-installers/yarn-add-express.sh"
   wasSuccessful=true
 elif [ "$yarnChoice" == 'n' ] || [ "$yarnChoice" == 'N']
 then
-  "${INSTALL_SCRIPTS_DIR}/npm-install-express.sh"
+  "${INSTALL_SCRIPTS_DIR}/express-installers/npm-install-express.sh"
   wasSuccessful=true
 else
   echo 'Invalid input. Run this script again and supply valid input'
