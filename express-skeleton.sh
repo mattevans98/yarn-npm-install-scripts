@@ -23,3 +23,4 @@ then
   echo 'Done! Happy coding! :)'
 else
   echo 'Something went wrong. Sorry about that...'
+fi
