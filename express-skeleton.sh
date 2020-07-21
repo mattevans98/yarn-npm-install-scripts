@@ -1,9 +1,25 @@
 #!/bin/bash
 
 echo 'Creating project directory structure...'
-mkdir -p src/models
-touch src/App.ts src/models/App.model.ts
+mkdir -p src/models src/tests
+touch src/App.ts src/models/App.model.ts src/tests/App.test.ts
 echo 'Would you like to use Yarn? (y/n)'
 read yarnChoice
-if [ "$yarnChoice" == 'y'] || [ $yarnChoice == 'Y']
+wasSuccessful=false
+if [ "$yarnChoice" == 'y'] || [ "$yarnChoice" == 'Y']
 then
+  "${INSTALL_SCRIPTS_DIR}/yarn-add-express.sh"
+  wasSuccessful=true
+elif [ "$yarnChoice" == 'n' ] || [ "$yarnChoice" == 'N']
+then
+  "${INSTALL_SCRIPTS_DIR}/npm-install-express.sh"
+  wasSuccessful=true
+else
+  echo 'Invalid input. Run this script again and supply valid input'
+fi
+
+if [ "$wasSuccessful" == true ]
+then
+  echo 'Done! Happy coding! :)'
+else
+  echo 'Something went wrong. Sorry about that...'

@@ -9,24 +9,29 @@ destDir=$(pwd)
 cp "${linterDir}/.eslintrc.js" "${linterDir}/.prettierrc.js" "${linterDir}/tsconfig.json" "$destDir"
 echo 'Config files copied and git was initialized. You should now add these options to package.json'
 echo "
-\"scripts\": {
-  \"start\": \"node --inspect=5858 -r ts-node/register src/App.ts\",
-  \"start:watch\": \"nodemon\",
-  \"build\": \"tsc\"
-},
-\"nodemonConfig\": {
-  {
-  \"ignore\": [
-      \"**/*.test.ts\",
-      \"**/*.spec.ts\",
-      \".git\",
-      \"node_modules\"
-    ],
-    \"watch\": [
-      \"src\"
-    ],
-    \"exec\": \"npm start\",
-    \"ext\": \"ts\"
+{
+  \"scripts\": {
+    \"start\": \"node --inspect=5858 -r ts-node/register src/App.ts\",
+    \"start:watch\": \"nodemon\",
+    \"build\": \"tsc\"
+  },
+  \"nodemonConfig\": {
+    {
+    \"ignore\": [
+        \"**/*.test.ts\",
+        \"**/*.spec.ts\",
+        \".git\",
+        \"node_modules\"
+      ],
+      \"watch\": [
+        \"src\"
+      ],
+      \"exec\": \"npm start\",
+      \"ext\": \"ts\"
+    }
+  },
+  \"jest\": {
+    \"preset\": \"ts-jest\"
   }
 }
 "
