@@ -6,6 +6,5 @@ echo 'Yarn installation script finished executing! Now copying config files...'
 linterDir="${INSTALL_SCRIPTS_DIR}/linter-configs/react"
 destDir=$(pwd)
 cp "${linterDir}/.eslintrc.js" "${linterDir}/.prettierrc.js" "${linterDir}/tsconfig.json" "$destDir"
-git add .eslintrc.js
-git add .prettierrc.js
+"${INSTALL_SCRIPTS_DIR}/utils/initialize-git.sh"
 echo 'Config files copied and added to git. Have fun!'
