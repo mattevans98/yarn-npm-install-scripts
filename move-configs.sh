@@ -1,3 +1,5 @@
+#!/bin/bash
+
 linterDir="${INSTALL_SCRIPTS_DIR}/linter-configs"
 destDir=$(pwd)
 
