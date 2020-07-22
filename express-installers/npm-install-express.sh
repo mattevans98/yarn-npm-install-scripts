@@ -2,7 +2,7 @@
 
 npm init
 npm i --save express @types/express body-parser
-npm i --save-dev typescript @types/node eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier nodemon prettier ts-node jest ts-jest @types/jest
+npm i --save-dev typescript @types/node eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier nodemon prettier ts-node jest ts-jest @types/jest @typescript-eslint/parser
 echo 'NPM install script finished executing! Now copying config files...'
 linterDir="${INSTALL_SCRIPTS_DIR}/linter-configs/express"
 destDir=$(pwd)

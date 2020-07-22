@@ -2,7 +2,7 @@
 
 yarn init
 yarn add express @types/express body-parser
-yarn add -D typescript @types/node eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier nodemon prettier ts-node jest ts-jest @types/jest
+yarn add -D typescript @types/node eslint eslint-config-prettier eslint-plugin-import eslint-plugin-prettier nodemon prettier ts-node jest ts-jest @types/jest @typescript-eslint/parser
 echo 'Yarn installation script finished executing! Now copying config files...'
 linterDir="${INSTALL_SCRIPTS_DIR}/linter-configs/express"
 destDir=$(pwd)
